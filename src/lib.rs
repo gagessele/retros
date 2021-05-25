@@ -1,14 +1,8 @@
 pub trait Sorter {
-    fn sort<T>(slice: &mut [T])
-    where
-        T: Ord;
+    fn sort<T: Ord>(slice: &mut [T]);
 }
 
-pub fn sort<T, S>(slice: &mut [T])
-where
-    T: Ord,
-    S: Sorter,
-{
+pub fn sort<T: Ord, S: Sorter>(slice: &mut [T]) {
     S::sort(slice);
 }
 

@@ -1,12 +1,9 @@
-use super::Sorter;
-
 pub struct BubbleSort;
 
+use super::Sorter;
+
 impl Sorter for BubbleSort {
-    fn sort<T>(slice: &mut [T])
-    where
-        T: Ord,
-    {
+    fn sort<T: Ord>(slice: &mut [T]) {
         let mut len = slice.len();
         let mut index = len;
         while index > 1 {
@@ -24,6 +21,6 @@ impl Sorter for BubbleSort {
 #[test]
 fn test_bubblesort() {
     let mut array = vec![5, 4, 3, 2, 1];
-    super::sort::<_, BubbleSort>(&mut array);
+    crate::sort::<_, BubbleSort>(&mut array);
     assert_eq!(array, &[1, 2, 3, 4, 5]);
 }
