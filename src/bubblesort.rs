@@ -21,6 +21,6 @@ impl Sorter for BubbleSort {
 #[test]
 fn test_bubblesort() {
     let mut array = vec![5, 4, 3, 2, 1];
-    crate::sort::<_, BubbleSort>(&mut array);
-    assert_eq!(array, &[1, 2, 3, 4, 5]);
+    BubbleSort::sort(&mut array);
+    assert_eq!(array, vec![1, 2, 3, 4, 5]);
 }
