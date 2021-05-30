@@ -3,4 +3,5 @@ pub trait Sorter {
 }
 
 mod bubblesort;
+mod heapsort;
 mod quicksort;

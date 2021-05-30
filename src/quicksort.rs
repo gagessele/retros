@@ -4,7 +4,7 @@ use super::Sorter;
 
 impl QuickSort {
     fn partition<T: Ord>(slice: &mut [T], lo: usize, hi: usize) -> usize {
-        let mut i: usize = lo;
+        let mut i = lo;
 
         for j in lo..hi {
             if slice[j] < slice[hi] {
